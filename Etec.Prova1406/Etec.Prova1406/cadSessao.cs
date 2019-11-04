@@ -204,6 +204,8 @@ namespace Etec.Prova1406
                 txtValor.Text = dgvSessao.Rows[e.RowIndex].Cells["VALOR"].Value.ToString();
                 btnAlterar.Enabled = true;
                 btnDeletar.Enabled = true;
+                btnCadastrar.Enabled = false;
+                btnNovo.Visible = true;
             }
             catch
             {
@@ -267,6 +269,8 @@ namespace Etec.Prova1406
                 MessageBox.Show("Atualização realizada!");
                 btnAlterar.Enabled = false;
                 btnDeletar.Enabled = false;
+                btnNovo.Visible = false;
+                btnCadastrar.Enabled = true;
                 using (StreamWriter arquivoTexto = new StreamWriter(@"C:\Cinema\Sessoes.txt", true))
                 {
                     arquivoTexto.WriteLine("-- Iniciando Log -- ");
@@ -305,6 +309,8 @@ namespace Etec.Prova1406
                     MessageBox.Show("O registro foi deletado!");
                     btnAlterar.Enabled = false;
                     btnDeletar.Enabled = false;
+                    btnNovo.Visible = false;
+                    btnCadastrar.Enabled = true;
                     using (StreamWriter arquivoTexto = new StreamWriter(@"C:\Cinema\Sessoes.txt", true))
                     {
                         int id = int.Parse(lblId.Text);
@@ -324,6 +330,15 @@ namespace Etec.Prova1406
                     MessageBox.Show("Não foi possível deletar!");
                 }
             }
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            limparCampos();
+            btnAlterar.Enabled = false;
+            btnDeletar.Enabled = false;
+            btnCadastrar.Enabled = true;
+            btnNovo.Visible = false;
         }
     }
 }

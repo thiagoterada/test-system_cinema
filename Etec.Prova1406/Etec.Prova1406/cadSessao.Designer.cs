@@ -49,6 +49,7 @@
             this.txtValor = new System.Windows.Forms.TextBox();
             this.mtxtHora = new System.Windows.Forms.MaskedTextBox();
             this.lblId = new System.Windows.Forms.Label();
+            this.btnNovo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSessao)).BeginInit();
             this.SuspendLayout();
             // 
@@ -249,11 +250,23 @@
             this.lblId.Text = "label8";
             this.lblId.Visible = false;
             // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(20, 386);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(183, 23);
+            this.btnNovo.TabIndex = 21;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Visible = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
             // cadSessao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(493, 394);
+            this.ClientSize = new System.Drawing.Size(493, 418);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.mtxtHora);
             this.Controls.Add(this.label7);
@@ -308,5 +321,6 @@
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.MaskedTextBox mtxtHora;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Button btnNovo;
     }
 }

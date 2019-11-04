@@ -189,6 +189,8 @@ namespace Etec.Prova1406
                 txtDire.Text = dgvFilme.Rows[e.RowIndex].Cells["DIRETOR"].Value.ToString();
                 btnAlterar.Enabled = true;
                 btnDeletar.Enabled = true;
+                btnCadastrar.Enabled = false;
+                btnNovo.Visible = true;
             }
             catch
             {
@@ -253,6 +255,8 @@ namespace Etec.Prova1406
                 MessageBox.Show("Atualização realizada!");
                 btnAlterar.Enabled = false;
                 btnDeletar.Enabled = false;
+                btnNovo.Visible = false;
+                btnCadastrar.Enabled = true;
                 dgvFilme.DataSource = banco.retornarFilmes();
                 using (StreamWriter arquivoTexto = new StreamWriter(@"C:\Cinema\Filmes.txt", true))
                 {
@@ -289,6 +293,8 @@ namespace Etec.Prova1406
                     MessageBox.Show("O registro foi deletado!");
                     btnAlterar.Enabled = false;
                     btnDeletar.Enabled = false;
+                    btnNovo.Visible = false;
+                    btnCadastrar.Enabled = true;
                     using (StreamWriter arquivoTexto = new StreamWriter(@"C:\Cinema\Filmes.txt", true))
                     {
                         int id = int.Parse(lblId.Text);
@@ -308,6 +314,15 @@ namespace Etec.Prova1406
                     MessageBox.Show("Não foi possível deletar!");
                 }
             }
+        }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            limparCampos();
+            btnAlterar.Enabled = false;
+            btnDeletar.Enabled = false;
+            btnCadastrar.Enabled = true;
+            btnNovo.Visible = false;
         }
     }
 }

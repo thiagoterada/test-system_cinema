@@ -47,6 +47,7 @@
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.mtxtDura = new System.Windows.Forms.MaskedTextBox();
             this.lblId = new System.Windows.Forms.Label();
+            this.btnNovo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilme)).BeginInit();
             this.SuspendLayout();
             // 
@@ -194,7 +195,7 @@
             this.dgvFilme.Location = new System.Drawing.Point(219, 13);
             this.dgvFilme.Name = "dgvFilme";
             this.dgvFilme.ReadOnly = true;
-            this.dgvFilme.Size = new System.Drawing.Size(267, 327);
+            this.dgvFilme.Size = new System.Drawing.Size(267, 356);
             this.dgvFilme.TabIndex = 17;
             this.dgvFilme.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFilme_CellDoubleClick);
             // 
@@ -232,11 +233,23 @@
             this.lblId.Text = "label8";
             this.lblId.Visible = false;
             // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(20, 346);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(183, 23);
+            this.btnNovo.TabIndex = 19;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Visible = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
             // cadFilme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(498, 357);
+            this.ClientSize = new System.Drawing.Size(498, 379);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.mtxtDura);
             this.Controls.Add(this.cboCategoria);
@@ -287,5 +300,6 @@
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.MaskedTextBox mtxtDura;
         private System.Windows.Forms.Label lblId;
+        private System.Windows.Forms.Button btnNovo;
     }
 }
