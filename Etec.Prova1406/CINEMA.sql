@@ -6,7 +6,8 @@ CREATE TABLE FILME(idFilme int primary key auto_increment,
                    classif int not null,
                    categ varchar(40) not null,
                    durac varchar(8) not null,
-                   ano int not null
+                   ano int not null,
+                   diretor varchar(40) not null
 );
 
 CREATE TABLE SESSAO(idSessao int primary key auto_increment,
@@ -18,3 +19,6 @@ CREATE TABLE SESSAO(idSessao int primary key auto_increment,
                     tipo varchar(4) not null,
                     valor decimal(10,2) not null
 );
+
+SELECT * FROM FILME;
+SELECT * FROM SESSAO;

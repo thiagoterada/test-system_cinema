@@ -55,5 +55,10 @@ namespace Etec.Prova1406
             }
             
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = DateTime.Today.ToShortDateString() + " | " + DateTime.Now.ToLongTimeString();
+        }
     }
 }

@@ -10,3 +10,7 @@ c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova14
 c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.pdb
 c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.cadSessao.resources
 c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.cadFilme.resources
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\bin\Debug\Etec.Prova1406.exe.manifest
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\bin\Debug\Etec.Prova1406.application
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.exe.manifest
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.application
