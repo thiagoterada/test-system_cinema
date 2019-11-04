@@ -57,56 +57,56 @@ namespace Etec.Prova1406.DAO
             msc.Close();
         }
 
-        public void cadastrarSessoes()
+        public void cadastrarSessoes(DateTime dt, DateTime hr, string nroSala, string idFilme, string capSala, string tipo, string valor)
         {
             MySqlConnection msc = new MySqlConnection();
             msc.ConnectionString = "server=localhost;User Id=root;password='';database=cinema";
             msc.Open();
-            string consulta = "";
+            string consulta = "INSERT INTO `cinema`.`SESSAO` (`dt`, `hr`, `nroSala`, `idFilme`, `capSala`, `tipo`, `valor`) VALUES ('"+dt.ToString("yyyy-MM-dd")+"', '"+hr.ToString("hh:mm:ss")+"', '"+nroSala+"', '"+idFilme+"', '"+capSala+"', '"+tipo+"', '"+valor+"');";
             MySqlCommand msco = new MySqlCommand(consulta, msc);
             msco.ExecuteNonQuery();
             msc.Close();
         }
 
-        public void atualizarFilmes()
+        public void atualizarFilmes(string id, string nm, string classif, string categ, string durac, string ano, string diretor)
         {
             MySqlConnection msc = new MySqlConnection();
             msc.ConnectionString = "server=localhost;User Id=root;password='';database=cinema";
             msc.Open();
-            string consulta = "";
+            string consulta = "UPDATE `cinema`.`FILME` SET `nm` = '"+nm+"', `classif` = '"+classif+"', `categ` = '"+categ+"', `durac` = '"+durac+"', `ano` = '"+ano+"', `diretor` = '"+diretor+"' WHERE (`idFilme` = '"+id+"');";
             MySqlCommand msco = new MySqlCommand(consulta, msc);
             msco.ExecuteNonQuery();
             msc.Close();
         }
 
-        public void atualizarSessoes()
+        public void atualizarSessoes(string id, DateTime dt, DateTime hr, string nroSala, string idFilme, string capSala, string tipo, string valor)
         {
             MySqlConnection msc = new MySqlConnection();
             msc.ConnectionString = "server=localhost;User Id=root;password='';database=cinema";
             msc.Open();
-            string consulta = "";
+            string consulta = "UPDATE `cinema`.`SESSAO` SET `dt` = '"+dt.ToString("yyyy-MM-dd") + "', `hr` = '"+ hr.ToString("hh:mm:ss") + "', `nroSala` = '"+nroSala+"', `idFilme` = '"+idFilme+"', `capSala` = '"+capSala+"', `tipo` = '"+tipo+"', `valor` = '"+valor+"' WHERE (`idSessao` = '"+id+"');";
             MySqlCommand msco = new MySqlCommand(consulta, msc);
             msco.ExecuteNonQuery();
             msc.Close();
         }
 
-        public void deletarFilmes()
+        public void deletarFilmes(string id)
         {
             MySqlConnection msc = new MySqlConnection();
             msc.ConnectionString = "server=localhost;User Id=root;password='';database=cinema";
             msc.Open();
-            string consulta = "";
+            string consulta = "DELETE FROM `cinema`.`FILME` WHERE (`idFilme` = '"+id+"');";
             MySqlCommand msco = new MySqlCommand(consulta, msc);
             msco.ExecuteNonQuery();
             msc.Close();
         }
 
-        public void deletarSessoes()
+        public void deletarSessoes(string id)
         {
             MySqlConnection msc = new MySqlConnection();
             msc.ConnectionString = "server=localhost;User Id=root;password='';database=cinema";
             msc.Open();
-            string consulta = "";
+            string consulta = "DELETE FROM `cinema`.`SESSAO` WHERE (`idSessao` = '" + id + "');";
             MySqlCommand msco = new MySqlCommand(consulta, msc);
             msco.ExecuteNonQuery();
             msc.Close();

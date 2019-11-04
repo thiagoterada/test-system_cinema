@@ -46,6 +46,7 @@
             this.dgvFilme = new System.Windows.Forms.DataGridView();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.mtxtDura = new System.Windows.Forms.MaskedTextBox();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilme)).BeginInit();
             this.SuspendLayout();
             // 
@@ -155,21 +156,25 @@
             // 
             // btnAlterar
             // 
+            this.btnAlterar.Enabled = false;
             this.btnAlterar.Location = new System.Drawing.Point(20, 259);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(183, 23);
             this.btnAlterar.TabIndex = 14;
             this.btnAlterar.Text = "Alterar";
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnDeletar
             // 
+            this.btnDeletar.Enabled = false;
             this.btnDeletar.Location = new System.Drawing.Point(20, 288);
             this.btnDeletar.Name = "btnDeletar";
             this.btnDeletar.Size = new System.Drawing.Size(183, 23);
             this.btnDeletar.TabIndex = 15;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // btnLimpar
             // 
@@ -179,6 +184,7 @@
             this.btnLimpar.TabIndex = 16;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // dgvFilme
             // 
@@ -190,6 +196,7 @@
             this.dgvFilme.ReadOnly = true;
             this.dgvFilme.Size = new System.Drawing.Size(267, 327);
             this.dgvFilme.TabIndex = 17;
+            this.dgvFilme.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvFilme_CellDoubleClick);
             // 
             // cboCategoria
             // 
@@ -213,13 +220,24 @@
             this.mtxtDura.Mask = "99:99:99";
             this.mtxtDura.Name = "mtxtDura";
             this.mtxtDura.Size = new System.Drawing.Size(86, 20);
-            this.mtxtDura.TabIndex = 18;
+            this.mtxtDura.TabIndex = 8;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(154, 37);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(35, 13);
+            this.lblId.TabIndex = 18;
+            this.lblId.Text = "label8";
+            this.lblId.Visible = false;
             // 
             // cadFilme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 357);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.mtxtDura);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.dgvFilme);
@@ -268,5 +286,6 @@
         private System.Windows.Forms.DataGridView dgvFilme;
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.MaskedTextBox mtxtDura;
+        private System.Windows.Forms.Label lblId;
     }
 }

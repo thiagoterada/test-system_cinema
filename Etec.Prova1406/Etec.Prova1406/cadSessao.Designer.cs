@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.dgvSessao = new System.Windows.Forms.DataGridView();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -41,13 +41,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.cboFilme = new System.Windows.Forms.ComboBox();
             this.cboTipoSessao = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.mtxtHora = new System.Windows.Forms.MaskedTextBox();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSessao)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,33 +62,39 @@
             this.dgvSessao.ReadOnly = true;
             this.dgvSessao.Size = new System.Drawing.Size(267, 367);
             this.dgvSessao.TabIndex = 19;
+            this.dgvSessao.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSessao_CellDoubleClick);
             // 
-            // button3
+            // btnLimpar
             // 
-            this.button3.Location = new System.Drawing.Point(20, 357);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(183, 23);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Limpar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnLimpar.Location = new System.Drawing.Point(20, 357);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(183, 23);
+            this.btnLimpar.TabIndex = 18;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
-            // button2
+            // btnDeletar
             // 
-            this.button2.Location = new System.Drawing.Point(20, 328);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 23);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Deletar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDeletar.Enabled = false;
+            this.btnDeletar.Location = new System.Drawing.Point(20, 328);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(183, 23);
+            this.btnDeletar.TabIndex = 17;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
-            // button1
+            // btnAlterar
             // 
-            this.button1.Location = new System.Drawing.Point(20, 299);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Alterar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAlterar.Enabled = false;
+            this.btnAlterar.Location = new System.Drawing.Point(20, 299);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Size = new System.Drawing.Size(183, 23);
+            this.btnAlterar.TabIndex = 16;
+            this.btnAlterar.Text = "Alterar";
+            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnCadastrar
             // 
@@ -97,6 +104,7 @@
             this.btnCadastrar.TabIndex = 15;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label6
             // 
@@ -169,12 +177,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cadastro de Sessão";
             // 
-            // dateTimePicker1
+            // dtpData
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(20, 59);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(183, 20);
-            this.dateTimePicker1.TabIndex = 2;
+            this.dtpData.Location = new System.Drawing.Point(20, 59);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(183, 20);
+            this.dtpData.TabIndex = 2;
             // 
             // label8
             // 
@@ -229,24 +237,35 @@
             this.mtxtHora.Mask = "99:99:99";
             this.mtxtHora.Name = "mtxtHora";
             this.mtxtHora.Size = new System.Drawing.Size(86, 20);
-            this.mtxtHora.TabIndex = 20;
+            this.mtxtHora.TabIndex = 4;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(154, 37);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(35, 13);
+            this.lblId.TabIndex = 20;
+            this.lblId.Text = "label8";
+            this.lblId.Visible = false;
             // 
             // cadSessao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(493, 394);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.mtxtHora);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.cboTipoSessao);
             this.Controls.Add(this.cboFilme);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpData);
             this.Controls.Add(this.dgvSessao);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLimpar);
+            this.Controls.Add(this.btnDeletar);
+            this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -269,9 +288,9 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvSessao;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -281,12 +300,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpData;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboFilme;
         private System.Windows.Forms.ComboBox cboTipoSessao;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.MaskedTextBox mtxtHora;
+        private System.Windows.Forms.Label lblId;
     }
 }
