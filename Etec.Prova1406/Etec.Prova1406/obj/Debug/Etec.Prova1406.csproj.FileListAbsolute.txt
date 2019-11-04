@@ -1,0 +1,12 @@
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\bin\Debug\Etec.Prova1406.exe.config
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\bin\Debug\Etec.Prova1406.exe
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\bin\Debug\Etec.Prova1406.pdb
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\bin\Debug\MySql.Data.dll
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.csprojResolveAssemblyReference.cache
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.Menu.resources
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.Properties.Resources.resources
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.csproj.GenerateResource.Cache
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.exe
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.pdb
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.cadSessao.resources
+c:\users\aluno\documents\visual studio 2015\Projects\Etec.Prova1406\Etec.Prova1406\obj\Debug\Etec.Prova1406.cadFilme.resources
