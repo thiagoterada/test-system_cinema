@@ -35,7 +35,6 @@
             this.txtClass = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDura = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtAno = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.dgvFilme = new System.Windows.Forms.DataGridView();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
+            this.mtxtDura = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFilme)).BeginInit();
             this.SuspendLayout();
             // 
@@ -111,14 +111,6 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Duração*:";
             // 
-            // txtDura
-            // 
-            this.txtDura.Location = new System.Drawing.Point(20, 153);
-            this.txtDura.MaxLength = 8;
-            this.txtDura.Name = "txtDura";
-            this.txtDura.Size = new System.Drawing.Size(86, 20);
-            this.txtDura.TabIndex = 8;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -159,6 +151,7 @@
             this.btnCadastrar.TabIndex = 13;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // btnAlterar
             // 
@@ -208,18 +201,26 @@
             "Drama",
             "Ficção Científica",
             "Romance",
-            "Terror",
-            ""});
+            "Terror"});
             this.cboCategoria.Location = new System.Drawing.Point(117, 106);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(86, 21);
             this.cboCategoria.TabIndex = 6;
+            // 
+            // mtxtDura
+            // 
+            this.mtxtDura.Location = new System.Drawing.Point(20, 153);
+            this.mtxtDura.Mask = "99:99:99";
+            this.mtxtDura.Name = "mtxtDura";
+            this.mtxtDura.Size = new System.Drawing.Size(86, 20);
+            this.mtxtDura.TabIndex = 18;
             // 
             // cadFilme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(498, 357);
+            this.Controls.Add(this.mtxtDura);
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.dgvFilme);
             this.Controls.Add(this.btnLimpar);
@@ -231,7 +232,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txtAno);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDura);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtClass);
@@ -257,7 +257,6 @@
         private System.Windows.Forms.TextBox txtClass;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtDura;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtAno;
         private System.Windows.Forms.Label label7;
@@ -268,5 +267,6 @@
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.DataGridView dgvFilme;
         private System.Windows.Forms.ComboBox cboCategoria;
+        private System.Windows.Forms.MaskedTextBox mtxtDura;
     }
 }

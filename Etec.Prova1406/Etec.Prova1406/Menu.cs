@@ -43,9 +43,17 @@ namespace Etec.Prova1406
 
         private void sessãoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            cadSessao form = new cadSessao();
-            form.MdiParent = this;
-            form.Show();
+            try
+            {
+                cadSessao form = new cadSessao();
+                form.MdiParent = this;
+                form.Show();
+            }
+            catch
+            {
+
+            }
+            
         }
     }
 }
